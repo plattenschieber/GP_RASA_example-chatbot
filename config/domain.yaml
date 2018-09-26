@@ -1,0 +1,19 @@
+intents:
+ - greet
+
+actions:
+ - utter_default
+ - utter_greet
+
+entities:
+ - example
+
+slots:
+  example:
+    type: text
+
+templates:
+ utter_default:
+   - text: "Leider habe ich Sie nicht verstanden."
+ utter_greet:
+   - text: "Hi"
