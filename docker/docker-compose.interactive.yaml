@@ -3,8 +3,11 @@ version: '3'
 services:
   chatbot-core:
     environment:
+      # port for socket connections
       - SOCKET_PORT=5005
-      - ENDPOINTS_CONFIG_FILE=config/endpoints.local.yaml
+      # path to endpoint.yaml
+      - ENDPOINTS_CONFIG_FILE=config/endpoints.prod.yaml
+      # mode of core
       - MODE=online_trainer
     ports:
-      - "5005:5005"
+      - "5006:5005"

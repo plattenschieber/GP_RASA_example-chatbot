@@ -2,11 +2,13 @@ version: '3'
 
 services:
   chatbot-core:
-    image: docker.nexus.gpchatbot.archi-lab.io/chatbot/core:latest
+    image: docker.nexus.gpchatbot.archi-lab.io/chatbot/kfz-chatbot:latest
     networks:
       - chatbot
     environment:
+      # debug information
       - ENABLE_DEBUG=true
+      # path to endpoint.yaml
       - ENDPOINTS_CONFIG_FILE=config/endpoints.prod.yaml
 networks:
   chatbot:
